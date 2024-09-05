@@ -1,3 +1,6 @@
+//Solution can handel empty array, invalid email, undefined values,not declared values......
+// if even a single value(required for that function) is undefined/empty i am skipping the print for that 
+
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
 function giveEmail(arr){
     if(!Array.isArray(arr)){
@@ -96,4 +99,19 @@ function findWithAge25(arr){
     }
     return ;
 }
-export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll,firstHobby,findWithAge25};//,cityAndCountry};
+//    Implement a loop to access and log the city and country of each individual in the dataset.
+function cityAndCountry(arr){
+    if(!Array.isArray(arr)||arr.length==0){
+        console.log("undefined pass a valid array");
+        return;
+    }
+    
+
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].city==undefined||arr[i].country==undefined||arr[i].city.trim().length==0||arr[i].country.trim().length==0)continue;
+        
+        console.log(`index ${i} - lives in city - ${arr[i].city} and country - ${arr[i].country}`);
+    }
+    return ;
+}
+export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll,firstHobby,findWithAge25,cityAndCountry};//};
