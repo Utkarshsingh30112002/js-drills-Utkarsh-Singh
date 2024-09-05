@@ -70,4 +70,17 @@ function ageOfAll(arr){
     }
     return ;
 }
-export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll};//,firstHobby,findWithAge25,cityAndCountry};
+function firstHobby(arr){
+    if(!Array.isArray(arr)||arr.length==0){
+        console.log("undefined pass a valid array");
+        return;
+    }
+
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].hobbies==undefined||arr[i].hobbies.length==0)console.log(`index ${i}- has no hobby`);
+        else if(arr[i].hobbies[0].trim().length==0)console.log("first hobby is empty");
+        else console.log(`index ${i} - first hobby is ${arr[i].hobbies[0]}`);
+    }
+    return ;
+}
+export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll,firstHobby};//,findWithAge25,cityAndCountry};
