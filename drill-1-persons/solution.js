@@ -83,4 +83,17 @@ function firstHobby(arr){
     }
     return ;
 }
-export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll,firstHobby};//,findWithAge25,cityAndCountry};
+//    Write a function that accesses and prints the names and email addresses of individuals aged 25.
+function findWithAge25(arr){
+    if(!Array.isArray(arr)||arr.length==0){
+        console.log("undefined pass a valid array");
+        return;
+    }
+    let reg=/^[a-z0-9_.+-]+@[a-z]+.[a-z]+$/i;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].name==undefined||arr[i].email==undefined||!reg.test(arr[i].email||arr[i].name.trim().length==0))continue;
+        if(arr[i].age==25)console.log(`${arr[i].name}'s mail is - ${arr[i].email}`);
+    }
+    return ;
+}
+export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll,firstHobby,findWithAge25};//,cityAndCountry};
