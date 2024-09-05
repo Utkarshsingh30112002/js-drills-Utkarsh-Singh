@@ -57,4 +57,17 @@ function at3(arr){
     console.log("name = "+arr[3].name+" and  City = "+arr[3].city);
     return ;
 }
-export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3};//,ageOfAll,firstHobby,findWithAge25,cityAndCountry};
+//    Implement a loop to access and print the ages of all individuals in the dataset.
+function ageOfAll(arr){
+    if(!Array.isArray(arr)||arr.length==0){
+        console.log("undefined pass a valid array");
+        return;
+    }
+
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].age==undefined||!Number.isInteger(arr[i].age)||arr[i].age<=0)continue;
+        console.log(`index ${i} - he is ${arr[i].age} years old`);
+    }
+    return ;
+}
+export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll};//,firstHobby,findWithAge25,cityAndCountry};

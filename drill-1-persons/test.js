@@ -1,4 +1,4 @@
-import {giveEmail,hobbiesWithAge,studentsOfAustralia,at3}from "./solution.js";//,ageOfAll,firstHobby,findWithAge25,cityAndCountry} 
+import {giveEmail,hobbiesWithAge,studentsOfAustralia,at3,ageOfAll}from "./solution.js";//,firstHobby,findWithAge25,cityAndCountry} 
 import {arrayOfObjects} from "./persons.js";
 
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
@@ -22,6 +22,9 @@ console.log(giveEmail());
   at3();
   
   //    Implement a loop to access and print the ages of all individuals in the dataset.
+  ageOfAll(arrayOfObjects);
+  ageOfAll([{}]);
+  ageOfAll();
   
   //    Create a function to retrieve and display the first hobby of each individual in the dataset.
   
