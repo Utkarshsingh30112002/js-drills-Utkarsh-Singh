@@ -26,5 +26,18 @@ function hobbiesWithAge(agee,arr){
     }
     return ;
 }
+//    Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+function studentsOfAustralia(arr){
+    if(!Array.isArray(arr)||arr.length==0){
+        console.log("undefined pass a valid array");
+        return;
+    }
+    
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].name==undefined||arr[i].name.trim().length==0)continue;
+        if(arr[i].isStudent==true&&arr[i].country=='Australia')console.log(arr[i].name);
+    }
+    return ;
+}
 
-export{giveEmail,hobbiesWithAge};//,studentsOfAustralia,at3,ageOfAll,firstHobby,findWithAge25,cityAndCountry};
+export{giveEmail,hobbiesWithAge,studentsOfAustralia};//,at3,ageOfAll,firstHobby,findWithAge25,cityAndCountry};

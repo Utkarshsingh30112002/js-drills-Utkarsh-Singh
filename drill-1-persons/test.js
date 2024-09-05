@@ -1,4 +1,4 @@
-import {giveEmail,hobbiesWithAge}from "./solution.js";//,studentsOfAustralia,at3,ageOfAll,firstHobby,findWithAge25,cityAndCountry} 
+import {giveEmail,hobbiesWithAge,studentsOfAustralia}from "./solution.js";//,at3,ageOfAll,firstHobby,findWithAge25,cityAndCountry} 
 import {arrayOfObjects} from "./persons.js";
 
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
@@ -12,6 +12,9 @@ console.log(giveEmail());
   hobbiesWithAge({});
   
   //    Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+  studentsOfAustralia(arrayOfObjects);
+  studentsOfAustralia([{}]);
+  studentsOfAustralia();
   
   //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
   
