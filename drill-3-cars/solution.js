@@ -55,5 +55,15 @@ function sortCarModels(arr){
     });
     return models;
 }  
-
-export{infoId33,lastCar,sortCarModels}//,allTheYears,olderThan3000,bmwAndAudi};
+//   // ==== Problem #4 ====
+//   // The accounting team needs all the years from every car on the lot. Execute a function that will return an array from the dealer data containing only the car years and log the result in the console as it was returned.
+function allTheYears(arr){
+    if(!validArgument(arr))return;
+    let years=[];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].car_year==undefined)continue;
+        else years.push(arr[i].car_year);
+    }
+    return years;
+}  
+export{infoId33,lastCar,sortCarModels,allTheYears}//,olderThan3000,bmwAndAudi};

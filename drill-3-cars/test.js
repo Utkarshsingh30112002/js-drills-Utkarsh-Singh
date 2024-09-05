@@ -1,4 +1,4 @@
-import {infoId33,lastCar,sortCarModels}from "./solution.js";//,allTheYears,olderThan3000,bmwAndAudi} 
+import {infoId33,lastCar,sortCarModels,allTheYears}from "./solution.js";//,olderThan3000,bmwAndAudi} 
 import {inventory}from "./cars.js";
 
 // ==== Problem #1 ====
@@ -19,3 +19,9 @@ import {inventory}from "./cars.js";
   console.log(sortCarModels(inventory));
   console.log(sortCarModels([{}]));
   console.log(sortCarModels());
+
+  // ==== Problem #4 ====
+  // The accounting team needs all the years from every car on the lot. Execute a function that will return an array from the dealer data containing only the car years and log the result in the console as it was returned.
+  console.log(allTheYears(inventory));
+  console.log(allTheYears([{}]));
+  console.log(allTheYears());
