@@ -53,5 +53,14 @@ function inGermany(users){
     }
     return arr;
 }
+// Q3 Find all users with masters Degree.
+function withMasters(users){
+    if(!validArgument(users))return;
+    let arr=[];
+    for(let user in users){
+        if(users[user].qualification=="Masters")arr.push(user);
+    }
+    return arr;
+}
 
-export{intrestInVideoGames,inGermany}//,withMasters,groupUsers};
+export{intrestInVideoGames,inGermany,withMasters}//,groupUsers};
