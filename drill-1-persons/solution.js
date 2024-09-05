@@ -39,5 +39,22 @@ function studentsOfAustralia(arr){
     }
     return ;
 }
+//    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+function at3(arr){
+    if(!Array.isArray(arr)||arr.length==0){
+        console.log("undefined pass a valid array");
+        return;
+    }
 
-export{giveEmail,hobbiesWithAge,studentsOfAustralia};//,at3,ageOfAll,firstHobby,findWithAge25,cityAndCountry};
+    if(arr.length<3){
+        console.log("Given array has length less then three");
+        return;
+    }
+    if(arr[3].name==undefined||arr[3].city==undefined||arr[3].name.trim().length==0||arr[3].city.trim().length==0) {
+        console.log("no name or city found at index 3");
+        return;
+    } 
+    console.log("name = "+arr[3].name+" and  City = "+arr[3].city);
+    return ;
+}
+export{giveEmail,hobbiesWithAge,studentsOfAustralia,at3};//,ageOfAll,firstHobby,findWithAge25,cityAndCountry};
