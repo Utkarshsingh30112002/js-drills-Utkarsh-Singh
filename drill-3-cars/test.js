@@ -1,4 +1,4 @@
-import {infoId33,lastCar,sortCarModels,allTheYears}from "./solution.js";//,olderThan3000,bmwAndAudi} 
+import {infoId33,lastCar,sortCarModels,allTheYears,olderThan2000}from "./solution.js";//,bmwAndAudi} 
 import {inventory}from "./cars.js";
 
 // ==== Problem #1 ====
@@ -25,3 +25,10 @@ import {inventory}from "./cars.js";
   console.log(allTheYears(inventory));
   console.log(allTheYears([{}]));
   console.log(allTheYears());
+
+  // The car lot manager needs to find out how many cars are older than the year 2000. Using the array you just obtained from the previous problem, find out how many cars were made before the year 2000 and return the array of older cars and log its length.
+  console.log(olderThan2000(allTheYears(inventory)).length+" cars are older then 2000");
+  allTheYears([{}]);
+  allTheYears();
+
+  

@@ -66,4 +66,17 @@ function allTheYears(arr){
     }
     return years;
 }  
-export{infoId33,lastCar,sortCarModels,allTheYears}//,olderThan3000,bmwAndAudi};
+//   // ==== Problem #5 ====
+//   // The car lot manager needs to find out how many cars are older than the year 2000. Using the array you just obtained from the previous problem, find out how many cars were made before the year 2000 and return the array of older cars and log its length.
+function olderThan2000(arr){
+    if(!Array.isArray(arr))return "not a valid array";
+    arr.sort((a,b)=>{
+        if(a<b)return -1;
+        else if(a>b)return 1;
+        else return 0;
+    });
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]>=2000)return arr.slice(0,i);
+    }
+}  
+export{infoId33,lastCar,sortCarModels,allTheYears,olderThan2000}//,bmwAndAudi};
