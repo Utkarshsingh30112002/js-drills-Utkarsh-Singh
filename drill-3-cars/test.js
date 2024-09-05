@@ -1,4 +1,4 @@
-import {infoId33,lastCar}from "./solution.js";//,sortCarModels,allTheYears,olderThan3000,bmwAndAudi} 
+import {infoId33,lastCar,sortCarModels}from "./solution.js";//,allTheYears,olderThan3000,bmwAndAudi} 
 import {inventory}from "./cars.js";
 
 // ==== Problem #1 ====
@@ -14,3 +14,8 @@ import {inventory}from "./cars.js";
   console.log(lastCar(inventory));
   console.log(lastCar([{}]));
   console.log(lastCar());
+  // ==== Problem #3 ====
+  // The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
+  console.log(sortCarModels(inventory));
+  console.log(sortCarModels([{}]));
+  console.log(sortCarModels());

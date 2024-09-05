@@ -39,5 +39,21 @@ function lastCar(arr){
         return `Last car is a ${arr[arr.length-1].car_make} ${arr[arr.length-1].car_model}`;
     
 }
+//   // ==== Problem #3 ====
+//   // The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
+function sortCarModels(arr){
+    if(!validArgument(arr))return;
+    let models=[];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].car_model==undefined||arr[i].car_model.trim().length==0)continue;
+        models.push(arr[i].car_model);
+    }
+    models.sort((a,b)=>{
+        if(a.toLowerCase()<b.toLowerCase())return -1;
+        else if(a.toLowerCase()>b.toLowerCase()) return 1;
+        else return 0;
+    });
+    return models;
+}  
 
-export{infoId33,lastCar}//,sortCarModels,allTheYears,olderThan3000,bmwAndAudi};
+export{infoId33,lastCar,sortCarModels}//,allTheYears,olderThan3000,bmwAndAudi};
