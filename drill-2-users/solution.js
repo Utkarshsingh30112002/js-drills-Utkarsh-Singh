@@ -62,5 +62,19 @@ function withMasters(users){
     }
     return arr;
 }
-
-export{intrestInVideoGames,inGermany,withMasters}//,groupUsers};
+// Q4 Group users based on their Programming language mentioned in their designation.
+function groupUsers(users){
+    if(!validArgument(users))return;
+    let regPython=/python/i;
+    let regGolang=/golang/i;
+    let regJavascript=/javascript/i;
+    let arr={"Python":[],"Javascript":[],"Golang":[],"Others":[]};
+    for(let user in users){
+        if(regPython.test(users[user].desgination))arr["Python"].push(user);
+        else if(regJavascript.test(users[user].desgination))arr["Javascript"].push(user);
+        else if(regGolang.test(users[user].desgination))arr["Golang"].push(user);
+        else arr["Others"].push(user);
+    }
+    return arr;
+}
+export{intrestInVideoGames,inGermany,withMasters,groupUsers}//};
