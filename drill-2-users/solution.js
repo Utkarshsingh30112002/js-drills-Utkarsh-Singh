@@ -44,5 +44,14 @@ function intrestInVideoGames(users){
     }
     return arr;
 }
+// Q2 Find all users staying in Germany.
+function inGermany(users){
+    if(!validArgument(users))return;
+    let arr=[];
+    for(let user in users){
+        if(users[user].nationality=="Germany")arr.push(user);
+    }
+    return arr;
+}
 
-export{intrestInVideoGames}//,inGermany,withMasters,groupUsers};
+export{intrestInVideoGames,inGermany}//,withMasters,groupUsers};
