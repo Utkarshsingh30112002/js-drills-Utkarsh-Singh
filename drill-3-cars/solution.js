@@ -79,4 +79,15 @@ function olderThan2000(arr){
         if(arr[i]>=2000)return arr.slice(0,i);
     }
 }  
-export{infoId33,lastCar,sortCarModels,allTheYears,olderThan2000}//,bmwAndAudi};
+//   // ==== Problem #6 ====
+//   // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Execute a function and return an array that only contains BMW and Audi cars.  Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+function bmwAndAudi(arr){
+    if(!validArgument(arr))return;
+    let ans=[];
+    let reg=/(bmw)|(audi)/i;
+    for(let i=0;i<arr.length;i++){
+        if(reg.test(arr[i].car_make))ans.push(arr[i]);
+    }
+    return ans;
+}
+export{infoId33,lastCar,sortCarModels,allTheYears,olderThan2000,bmwAndAudi}//};

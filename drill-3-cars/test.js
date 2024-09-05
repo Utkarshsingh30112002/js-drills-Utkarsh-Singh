@@ -1,4 +1,4 @@
-import {infoId33,lastCar,sortCarModels,allTheYears,olderThan2000}from "./solution.js";//,bmwAndAudi} 
+import {infoId33,lastCar,sortCarModels,allTheYears,olderThan2000,bmwAndAudi}from "./solution.js";//} 
 import {inventory}from "./cars.js";
 
 // ==== Problem #1 ====
@@ -31,4 +31,8 @@ import {inventory}from "./cars.js";
   allTheYears([{}]);
   allTheYears();
 
-  
+  // ==== Problem #6 ====
+  // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Execute a function and return an array that only contains BMW and Audi cars.  Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+  console.log(JSON.stringify(bmwAndAudi(inventory)));
+  bmwAndAudi([{}]);
+  bmwAndAudi();;
