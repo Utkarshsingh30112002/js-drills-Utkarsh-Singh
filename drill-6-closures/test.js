@@ -14,6 +14,6 @@ console.log(f2());
 console.log(f2());
 
 const f3=cacheFunction((data)=>data);
-console.log(f3(1));
-console.log(f3(2));
+console.log(f3({a:1}));
+console.log(f3({a:1}));
 console.log(f3(2));
