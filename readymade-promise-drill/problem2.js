@@ -18,31 +18,32 @@ function toUppercase(data){
     data=data.toUpperCase();
     return fs.writeFile("uppercase.txt",data).then(()=>{
         console.log("uppercase file saved")
-        return fs.writeFile("./filenames.txt","uppercase.txt\n").then(()=>{
-            console.log("uppercase.txt file name added")
-            return data
-        })
-})}
+        return fs.writeFile("./filenames.txt","uppercase.txt\n")
+    }) .then(()=>{
+        console.log("uppercase.txt file name added")
+        return data
+    })
+}
 
 function splitToSentences(data){
         data=data.toLowerCase()
         data=data.split(".").join("\n")
         return fs.writeFile("sentences.txt",data).then(()=>{
             console.log("sentence file written successfully")
-            return fs.appendFile("./filenames.txt","sentences.txt\n").then(()=>{
-                console.log("sentences.txt file name appended")
-                return data
-            })
+            return fs.appendFile("./filenames.txt","sentences.txt\n")
+    }).then(()=>{
+        console.log("sentences.txt file name appended")
+        return data
     })
 }
 function sort(data){
         data=data.split(" ").sort().join(" ")
         return fs.writeFile("sortData.txt",data).then(()=>{
             console.log("sortData file written successfully")
-            return fs.appendFile("./filenames.txt","sortData.txt").then(()=>{
-                console.log("sortData.txt file name appended")
-                return readFile("./filenames.txt")
-            })
+            return fs.appendFile("./filenames.txt","sortData.txt")
+        }).then(()=>{
+            console.log("sortData.txt file name appended")
+            return readFile("./filenames.txt")
         })
 }
 function deletion(data){
